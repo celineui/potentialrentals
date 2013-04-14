@@ -1,0 +1,115 @@
+// Place all the styles related to the rentals controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background: url('7alxkac.png') 0 0 repeat;
+  font-family: 'courier', serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+h1 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 36px;
+  margin: -7px;
+  margin-bottom: 0px;
+  color: #66FFFF;
+}
+
+p, ol, ul, td {
+  color: #F0F0F0;
+  font-family: 'courier', serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+  &:visited {
+    color: #666;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+// table {
+//   border: 2px solid black;
+//   border-collapse: separate;
+//   border-spacing: 2px;
+// }
+// tr {
+//   border: 2px solid #c6c9cc;
+// }
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th, td {
+  border: 10px solid #c6c9cc;
+  color: #F0F0F0;
+  font-family: 'courier', serif;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+a:link {
+COLOR: #F0F0F0;
+}
+a:visited {
+COLOR: #FFFF66;
+}
+a:hover {
+COLOR: #FF0000;
+}
+a:active {
+COLOR: #F0F0F0;
+}

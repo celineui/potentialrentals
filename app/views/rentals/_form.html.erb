@@ -1,0 +1,59 @@
+<%= form_for(@rental) do |f| %>
+  <% if @rental.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rental.errors.count, "error") %> prohibited this rental from being saved:</h2>
+
+      <ul>
+      <% @rental.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.text_field :price, placeholder: "$ price" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :location, placeholder: "location" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :address, placeholder: "address" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :sq_ft, placeholder: "square footage" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :bedroom, placeholder: "bedroom(s)" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :bathroom, placeholder: "bathroom(s)" %>
+  </div>
+  <div class="field">
+    parking: <%= f.check_box :parking %>
+  </div>
+  <div class="field">
+    in-unit laundry: <%= f.check_box :in_unit_laundry %>
+  </div>
+  <div class="field">
+    <%= f.text_field :pic, placeholder: "link to picture" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :email, placeholder: "contact email" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :phone, placeholder: "contact phone" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :source, placeholder: "link to source" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :comments, placeholder: "comments" %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
