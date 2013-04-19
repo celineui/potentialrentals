@@ -2,7 +2,7 @@ class RentalsController < ApplicationController
   # GET /rentals
   # GET /rentals.json
   def index
-    @rentals = Rental.all
+    @rentals = Rental.order('rating desc', 'price asc')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -60,7 +60,7 @@ class RentalsController < ApplicationController
 
     respond_to do |format|
       if @rental.update_attributes(params[:rental])
-        format.html { redirect_to @rental, notice: 'Rental was successfully updated.' }
+        format.html { redirect_to rentals_url, notice: 'Rental was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

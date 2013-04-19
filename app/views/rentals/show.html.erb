@@ -1,18 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-price: $<%= @rental.price %><br>
-location: <%= @rental.location %><br>
-address: <%= @rental.address %><br>
-size: <%= @rental.sq_ft %> ft²<br>
-bedroom(s): <%= @rental.bedroom %><br>
-bathroom(s): <%= @rental.bathroom %><br>
-parking: <%= @rental.parking %><br>
-in-unit laundry: <%= @rental.parking %><br>
-contact email: <%= @rental.email %><br>
-contact phone: <%= @rental.phone %><br>
-source: <%= link_to @rental.source, @rental.source %><br>
-comments: <%= @rental.comments %><br>
-picture: <br><%= image_tag @rental.pic %><br>
-<%= link_to 'Edit', edit_rental_path(@rental) %> |
-<%= link_to 'Destroy', @rental, method: :delete, data: { confirm: 'Are you sure?' } %> |
-<%= link_to 'Home', rentals_path %>
+  <%= link_to image_tag('home.png', :size => "25x25"), rentals_path %>
+  <%= link_to image_tag('pencil.png', :size => "20x20"), edit_rental_path(@rental) %>
+  <%= link_to image_tag('trash.png', :size => "25x25"), @rental, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<div class="field">
+  rating: <%= @rental.rating %><br>
+  price: $<%= @rental.price %><br>
+  location: <%= @rental.location %><br>
+  address: <%= @rental.address %><br>
+  size: <%= @rental.sq_ft %> ft²<br>
+  bedroom(s): <%= @rental.bedroom %><br>
+  bathroom(s): <%= @rental.bathroom %><br>
+  parking: <%= @rental.parking %><br>
+  in-unit laundry: <%= @rental.parking %><br>
+  contact email: <%= @rental.email %><br>
+  contact phone: <%= @rental.phone %><br>
+  source: <%= link_to @rental.source, @rental.source %><br>
+  comments: <%= @rental.comments %><br>
+  picture: <br><%= image_tag @rental.pic %><br>
+</div>
+

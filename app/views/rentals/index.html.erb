@@ -1,45 +1,51 @@
-<h1>Potential Seattle Apartment Rentals</h1>
-<%= link_to 'New Rental', new_rental_path %>
+<div class="header">
+    <header><h1>Potential Seattle Apartment Rentals</h1>
+    <%= link_to 'New Rental', new_rental_path %>
+    </header>
+</div> <!-- header div end -->
 
+<div class="table">
+    <table>
+      <tr>
+        <th scope="col">Rating</th>
+        <th scope="col">Price</th>
+        <th scope="col">Location</th>
+        <th scope="col">Address</th>
+        <th scope="col">Square Footage</th>
+        <th scope="col">Bed(s)</th>
+        <th scope="col">Bath(s)</th>
+        <th scope="col">Parking</th>
+        <th scope="col">W/D</th>
+        <th scope="col">Pic</th>
+        <th scope="col">Comments</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Email</th>
+        <th scope="col">Source</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Recycle</th>
+      </tr>
 
-<table>
-  <tr>
-    <th scope="col">Price</th>
-    <th scope="col">Location</th>
-    <th scope="col">Address</th>
-    <th scope="col">Square Footage</th>
-    <th scope="col">Bedroom(s)</th>
-    <th scope="col">Bathroom(s)</th>
-    <th scope="col">Parking</th>
-    <th scope="col">W/D</th>
-    <th scope="col">Pic</th>
-    <th scope="col">Comments</th>
-    <th scope="col">Phone</th>
-    <th scope="col">Email</th>
-    <th scope="col">Source</th>
-  </tr>
+    <% @rentals.each do |rental| %>
 
-<% @rentals.each do |rental| %>
-
-  <tr>
-    <td>$<%= link_to rental.price, rental %></td>
-    <td><%= rental.location %></td>
-    <td><%= rental.address %></td>
-    <td><%= rental.sq_ft %> ft² </td>
-    <td><%= rental.bedroom %></td>
-    <td><%= rental.bathroom %></td>
-    <td><%= rental.parking %></td>
-    <td><%= rental.in_unit_laundry %></td>
-    <td><%= image_tag rental.pic, :height => "150" %></td>
-    <td><%= rental.comments %></td>
-    <td><%= rental.phone %></td>
-    <td><%= mail_to "rental.email", 'email' %></td>
-    <td><%= link_to 'source', rental.source %></td>
-    <td><%= link_to 'edit', edit_rental_path(rental) %></td>
-    <td><%= link_to 'destroy', rental, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
+      <tr>
+        <td><%= link_to rental.rating, rental %></td>
+        <td>$<%= rental.price %></td>
+        <td><%= rental.location %></td>
+        <td><%= rental.address %></td>
+        <td><%= rental.sq_ft %> ft² </td>
+        <td><%= rental.bedroom %></td>
+        <td><%= rental.bathroom %></td>
+        <td><%= rental.parking %></td>
+        <td><%= rental.in_unit_laundry %></td>
+        <td><%= image_tag rental.pic, :height => "150" %></td>
+        <td><%= rental.comments %></td>
+        <td><%= rental.phone %></td>
+        <td><%= mail_to rental.email, 'email', :target => "_blank" %></td>
+        <td><%= link_to 'source', rental.source, :target => "_blank" %></td>
+        <td><%= link_to image_tag('pencil.png', :size => "20x20"), edit_rental_path(rental) %></td>
+        <td><%= link_to image_tag('trash.png', :size => "25x25"), rental, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    </table>
+    <br />
+</div> <!-- table div end -->

@@ -15,7 +15,7 @@ h1 {
   font-size: 36px;
   margin: -7px;
   margin-bottom: 0px;
-  color: #66FFFF;
+  color: #4DEBD6;
 }
 
 p, ol, ul, td {
@@ -47,6 +47,22 @@ div {
     margin-bottom: 10px;
   }
 }
+
+
+div.header {
+  width:775px;
+  padding:0px;
+  border:0px solid gray;
+  margin:60px 250px 0px 250px;
+}
+
+div.table {
+  width:1200px;
+  padding:40px;
+  border:0px solid gray;
+  margin:0px;
+}
+
 
 #notice {
   color: green;
@@ -81,24 +97,17 @@ div {
   }
 }
 
-// table {
-//   border: 2px solid black;
-//   border-collapse: separate;
-//   border-spacing: 2px;
-// }
-// tr {
-//   border: 2px solid #c6c9cc;
-// }
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 th, td {
-  border: 10px solid #c6c9cc;
+  border: 3px solid #FFFFFF;
   color: #F0F0F0;
   font-family: 'courier', serif;
-  font-size: 15px;
-  line-height: 18px;
+  font-size: 13px;
+  line-height: 12px;
+  text-align:center;
 }
 
 a:link {
@@ -108,8 +117,12 @@ a:visited {
 COLOR: #FFFF66;
 }
 a:hover {
-COLOR: #FF0000;
+background: url('7alxkac.png') 0 0 repeat;
 }
 a:active {
 COLOR: #F0F0F0;
+}
+
+.field {
+  color: #F0F0F0;
 }
